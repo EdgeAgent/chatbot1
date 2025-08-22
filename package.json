@@ -1,0 +1,19 @@
+{
+  "name": "chatbot-snippet-generator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generate, save, and serve chatbot embed snippets for clients.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node server.js",
+    "seed": "node scripts/seed.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nanoid": "^5.0.7"
+  }
+}
