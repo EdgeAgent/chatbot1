@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chatbot Snippet Generator</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Chatbot Snippet Generator & Manager</h1>
+        <p>Create, save, and share embed snippets for your clients.</p>
+      </header>
+
+      <section class="card">
+        <h2>Create New Bot</h2>
+        <div class="grid">
+          <div>
+            <label>Bot Name</label>
+            <input id="name" placeholder="e.g. Support Bot" />
+          </div>
+          <div>
+            <label>Client Name</label>
+            <input id="client_name" placeholder="e.g. ACME Co." />
+          </div>
+          <div>
+            <label>Client Domain (optional)</label>
+            <input id="domain" placeholder="e.g. example.com" />
+          </div>
+          <div>
+            <label>Bot URL (iframe)</label>
+            <input id="bot_url" placeholder="https://yourchatapp.com/bot/123" />
+          </div>
+          <div>
+            <label>Button Color</label>
+            <input id="color" type="color" value="#0066ff" />
+          </div>
+          <div>
+            <label>Position</label>
+            <select id="position">
+              <option value="right">Bottom Right</option>
+              <option value="left">Bottom Left</option>
+            </select>
+          </div>
+          <div class="full">
+            <label>Greeting</label>
+            <input id="greeting" placeholder="Hi 👋 How can I help you?" />
+          </div>
+        </div>
+        <button id="createBtn">Create & Save</button>
+      </section>
+
+      <section class="card">
+        <h2>Saved Bots</h2>
+        <div id="bots"></div>
+      </section>
+
+      <footer>
+        <p>Embed format your clients will paste:</p>
+        <code>&lt;script src="https://YOUR_HOST/embed/PUBLIC_ID.js" async&gt;&lt;/script&gt;</code>
+      </footer>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
